@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "43763bcd-8f74-45ca-829a-866ae1e1ee1d"
+        },
+        "resourceGroupName": {
+            "value": "SQLCollectorSampleRG"
+        },
+        "location": {
+            "value": "eastus2"
+        },
+        "sqlPoolServerName": {
+            "value": "sqlcollector-prod-sqlsvr"
+        },
+        "synapseDatabaseName": {
+            "value": "MySynapseSQLPool"
+        },
+        "dashboardName": {
+            "value": "MySynapseSQLPool-Monitoring-Dashboard"
+        }
+    }
+}
