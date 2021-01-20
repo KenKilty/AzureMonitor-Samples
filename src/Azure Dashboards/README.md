@@ -22,6 +22,12 @@ Once deployed the Azure Dashboard may be secured by Azure RBAC. In the Azure Por
 .\deploy.ps1 -ResourceGroupName SQLCollectorSampleRG -TemplateFilePath .\azuredeploy.json -TemplateParameterFilePath .\azuredeploy.parameters.json
 ```
 
+Please note that the scope for Log Analytics workspace needs to contain the underlying Log Analytics workspace that contains the diagnostics for the dedicated SQLPool (Synapse Analytics). In the sample this is computer via a ARM stirng concatenation. If necessary adjust this scope to the environment of your deployment.
+
+```Javascript
+[concat('/subscriptions/',parameters('subscriptionId'),'/resourceGroups/',parameters('resourceGroupName'),'/providers/Microsoft.Sql/servers/',parameters('sqlpoolservername'),'/databases/',parameters('synapseDatabaseName'))]
+```
+
 ## References & Attribution
 - [Azure metrics Dashboard for Azure Synapse Analytics - Part 1](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/azure-metrics-dashboard-for-azure-synapse-analytics-part-1/ba-p/2016393)
 - [Azure metrics Dashboard (Custom dashboards using Log Analytics) for Azure Synapse Analytics - Part 2](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/azure-metrics-dashboard-custom-dashboards-using-log-analytics/ba-p/2016426)

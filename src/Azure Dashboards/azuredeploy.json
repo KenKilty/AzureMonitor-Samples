@@ -566,7 +566,7 @@
                                             "name": "Scope",
                                             "value": {
                                                 "resourceIds": [
-                                                    "[concat('/subscriptions/',parameters('subscriptionId'))]"
+                                                    "[concat('/subscriptions/',parameters('subscriptionId'),'/resourceGroups/',parameters('resourceGroupName'),'/providers/Microsoft.Sql/servers/',parameters('sqlpoolservername'),'/databases/',parameters('synapseDatabaseName'))]"
                                                 ]
                                             },
                                             "isOptional": true
@@ -656,7 +656,7 @@
                                             "name": "Scope",
                                             "value": {
                                                 "resourceIds": [
-                                                    "[concat('/subscriptions/',parameters('subscriptionId'))]"
+                                                    "[concat('/subscriptions/',parameters('subscriptionId'),'/resourceGroups/',parameters('resourceGroupName'),'/providers/Microsoft.Sql/servers/',parameters('sqlpoolservername'),'/databases/',parameters('synapseDatabaseName'))]"
                                                 ]
                                             },
                                             "isOptional": true
@@ -746,7 +746,7 @@
                                             "name": "Scope",
                                             "value": {
                                                 "resourceIds": [
-                                                    "[concat('/subscriptions/',parameters('subscriptionId'))]"
+                                                    "[concat('/subscriptions/',parameters('subscriptionId'),'/resourceGroups/',parameters('resourceGroupName'),'/providers/Microsoft.Sql/servers/',parameters('sqlpoolservername'),'/databases/',parameters('synapseDatabaseName'))]"
                                                 ]
                                             },
                                             "isOptional": true
