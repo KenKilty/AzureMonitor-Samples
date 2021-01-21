@@ -17,6 +17,9 @@
         "synapseDatabaseName": {
             "value": "MySynapseSQLPool"
         },
+        "workspaceName": {
+            "value": "MySynapseSQLPool" 
+        },
         "dashboardName": {
             "value": "MySynapseSQLPool-Monitoring-Dashboard"
         }

@@ -17,6 +17,9 @@
         "synapseDatabaseName": {
             "type": "string"
         },
+        "workspaceName": {
+            "type": "string"
+        },
         "lookback": {
             "type": "string",
             "defaultValue": "30m"
@@ -560,6 +563,12 @@
                                         },
                                         {
                                             "name": "ComponentId",
+                                            "value": {
+                                                "SubscriptionId": "[parameters('subscriptionId')]",
+                                                "ResourceGroup": "[parameters('resourceGroupName')]",
+                                                "Name": "[parameters('workspaceName')]",
+                                                "ResourceId": "[resourceId(parameters('subscriptionId'),parameters('resourceGroupName'), 'microsoft.operationalinsights/workspaces', parameters('workspaceName'))]"
+                                            },
                                             "isOptional": true
                                         },
                                         {
@@ -650,6 +659,12 @@
                                         },
                                         {
                                             "name": "ComponentId",
+                                            "value": {
+                                                "SubscriptionId": "[parameters('subscriptionId')]",
+                                                "ResourceGroup": "[parameters('resourceGroupName')]",
+                                                "Name": "[parameters('workspaceName')]",
+                                                "ResourceId": "[resourceId(parameters('subscriptionId'),parameters('resourceGroupName'), 'microsoft.operationalinsights/workspaces', parameters('workspaceName'))]"
+                                            },
                                             "isOptional": true
                                         },
                                         {
@@ -740,6 +755,12 @@
                                         },
                                         {
                                             "name": "ComponentId",
+                                            "value": {
+                                                "SubscriptionId": "[parameters('subscriptionId')]",
+                                                "ResourceGroup": "[parameters('resourceGroupName')]",
+                                                "Name": "[parameters('workspaceName')]",
+                                                "ResourceId": "[resourceId(parameters('subscriptionId'),parameters('resourceGroupName'), 'microsoft.operationalinsights/workspaces', parameters('workspaceName'))]"
+                                            },
                                             "isOptional": true
                                         },
                                         {
