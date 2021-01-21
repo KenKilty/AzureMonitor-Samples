@@ -10,11 +10,11 @@ Fortunately, Azure Dashboards provides a means of programmatic provisioning whic
 
 This example demonstrates a generalized ARM template containing an Azure Synapse Analytics dashboard that may be repeatedly deployed into one or more resource groups with externalized inputs specific to a given Synapse Analytics Deployment. The dashboard is based on a Microsoft CSS blog series linked below. The dashboard data is sourced from Azure Multidimensional Metrics (MDM) as well as Azure Monitor Logs (Log Analytics). Once deployed the dashboard will resemble the following assuming the Azure Synapse Analytics resource has diagnostics configured to be sent to a Log Analytics workspace.
 
-![](resources/dashboard.png?raw=true)
+![Dashboard Sample](resources/dashboard.png?raw=true)
 
 Once deployed the Azure Dashboard may be secured by Azure RBAC. In the Azure Portal the shared dashboard resource  will be 'hidden' by default in the Azure Portal but is visable via selecting 'show hidden' or via your Azure CLI of choice. The resource provider is [Microsoft.Portal/dashboards](https://docs.microsoft.com/en-us/azure/templates/microsoft.portal/dashboards).
 
-![](resources/azdashboardrp.png)
+![Azure Dashboard Resource Provider](resources/azdashboardrp.png)
 
 ## Deployment Example (local)
 
@@ -29,6 +29,7 @@ Please note that the scope for Log Analytics workspace needs to contain the unde
 ```
 
 ## References & Attribution
+
 - [Azure metrics Dashboard for Azure Synapse Analytics - Part 1](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/azure-metrics-dashboard-for-azure-synapse-analytics-part-1/ba-p/2016393)
 - [Azure metrics Dashboard (Custom dashboards using Log Analytics) for Azure Synapse Analytics - Part 2](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/azure-metrics-dashboard-custom-dashboards-using-log-analytics/ba-p/2016426)
 - [askpra/AzureSynapseAnalytics_LogAnalyticsScripts](https://github.com/askpra/AzureSynapseAnalytics_LogAnalyticsScripts)
